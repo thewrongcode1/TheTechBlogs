@@ -8,26 +8,14 @@ title: "Home"
     <section class="featured-technologies">
         <h2>Explore Technologies</h2>
         <div class="technology-grid">
-            <div class="tech-card hadoop">
-                <h3>Hadoop</h3>
-                <a href="/hadoop" class="cta-button">View Blogs</a>
-            </div>
-            <div class="tech-card spark">
-                <h3>Spark</h3>
-                <a href="/spark" class="cta-button">View Blogs</a>
-            </div>
-            <div class="tech-card ai">
-                <h3>Artificial Intelligence</h3>
-                <a href="/ai" class="cta-button">View Blogs</a>
-            </div>
-            <div class="tech-card cloud">
-                <h3>Cloud Computing</h3>
-                <a href="/cloud" class="cta-button">View Blogs</a>
-            </div>
-            <div class="tech-card webdev">
-                <h3>Web Development</h3>
-                <a href="/web-development" class="cta-button">View Blogs</a>
-            </div>
+            
+            
+                {% for post in site.posts limit:3 %}
+                  <div class="tech-card">
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <small>{{ post.date | date: "%B %d, %Y" }}</small>
+                  </div>
+                {% endfor %}
         </div>
     </section>
 
