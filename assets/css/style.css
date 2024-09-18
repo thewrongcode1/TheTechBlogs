@@ -8,11 +8,6 @@ html, body {
     color: #333;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-}
-
 header {
     background-color: #444;
     color: white;
@@ -22,82 +17,74 @@ header {
     letter-spacing: 1px;
 }
 
-/* Navigation Bar Styling */
-.navbar {
-    background-color: #333;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* Concept Container Styling */
+.concept-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    padding: 50px;
+    gap: 50px;
 }
 
-.navbar ul li {
-    margin: 0 20px;
+.concept {
+    width: 45%;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-.navbar ul li a {
+.concept h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.concept p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.concept.hadoop {
+    background-color: #ffb84d; /* Hadoop-inspired color */
     color: white;
+}
+
+.concept.spark {
+    background-color: #87CEEB; /* Spark-inspired color */
+    color: white;
+}
+
+.concept:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Call-to-Action Buttons */
+.cta-button {
+    padding: 15px 30px;
+    background-color: white;
+    color: #333;
     text-decoration: none;
-    font-size: 1.2em;
     font-weight: bold;
-    padding: 10px 20px;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
-.navbar ul li a:hover {
+.cta-button:hover {
     background-color: #007BFF;
-    border-radius: 5px;
-}
-
-/* Main content should take up remaining height */
-main {
-    flex-grow: 1;
-    max-width: 90%;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Sticky Footer Styling */
-footer {
-    background-color: #444;
     color: white;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header {
-        font-size: 1.8em;
-        padding: 15px;
-    }
-
-    main {
-        max-width: 95%;
-        padding: 15px;
-    }
-
-    .navbar ul {
+    .concept-container {
         flex-direction: column;
+        padding: 20px;
+        gap: 20px;
     }
 
-    .navbar ul li {
-        margin-bottom: 10px;
-    }
-
-    footer {
-        font-size: 0.9em;
+    .concept {
+        width: 100%;
+        padding: 20px;
     }
 }

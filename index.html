@@ -3,23 +3,18 @@ layout: default
 title: "Home"
 ---
 
-# Welcome to The Tech Blogs
+<div class="concept-container">
+    <!-- Hadoop Section -->
+    <section class="concept hadoop">
+        <h2>Hadoop</h2>
+        <p>Explore our comprehensive guides on Hadoop, including setup, configurations, and real-world use cases.</p>
+        <a href="#hadoop-tutorials" class="cta-button">Hadoop Tutorials</a>
+    </section>
 
-We explore the latest in technology trends, frameworks, and stacks. Stay tuned for detailed guides on trending topics like Big Data, Hadoop, AI, and cloud computing.
-
-## Trending Posts
-
-<ul>
-  {% for post in site.posts limit:3 %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <small>{{ post.date | date: "%B %d, %Y" }}</small>
-    </li>
-  {% endfor %}
-</ul>
-
-## About Us
-
-The Tech Blogs is your go-to source for comprehensive tutorials and insights into cutting-edge technology. Join us as we deep-dive into Big Data, Hadoop, and more!
-
-© 2024 The Tech Blogs
+    <!-- Spark Section -->
+    <section class="concept spark">
+        <h2>Spark</h2>
+        <p>Learn about Spark, a powerful tool for big data analytics and processing, with in-depth tutorials and examples.</p>
+        <a href="#spark-tutorials" class="cta-button">Spark Tutorials</a>
+    </section>
+</div>
