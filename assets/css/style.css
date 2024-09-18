@@ -22,6 +22,39 @@ header {
     letter-spacing: 1px;
 }
 
+/* Navigation Bar Styling */
+.navbar {
+    background-color: #333;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #007BFF;
+    border-radius: 5px;
+}
+
 /* Main content should take up remaining height */
 main {
     flex-grow: 1;
@@ -33,43 +66,6 @@ main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Trending Posts Styling */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background-color: #fff;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-a {
-    color: #007BFF;
-    font-size: 1.3em;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-small {
-    display: block;
-    color: #666;
-    margin-top: 5px;
-}
-
 /* Sticky Footer Styling */
 footer {
     background-color: #444;
@@ -79,22 +75,6 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-}
-
-/* Ensuring the footer stays at the bottom of the page */
-html, body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-footer {
-    margin-top: auto;
 }
 
 /* Responsive Design */
@@ -109,8 +89,12 @@ footer {
         padding: 15px;
     }
 
-    li {
-        padding: 15px;
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        margin-bottom: 10px;
     }
 
     footer {
