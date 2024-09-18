@@ -1,15 +1,14 @@
 /* General Styling */
-html, body {
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f0f0f0 40%, #ffffff 100%);
+    background-color: #f4f4f4;
     color: #333;
 }
 
 header {
-    background-color: #444;
+    background-color: #333;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -17,74 +16,117 @@ header {
     letter-spacing: 1px;
 }
 
-/* Concept Container Styling */
-.concept-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    gap: 50px;
-}
-
-.concept {
-    width: 45%;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.concept h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.concept p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-}
-
-.concept.hadoop {
-    background-color: #ffb84d; /* Hadoop-inspired color */
-    color: white;
-}
-
-.concept.spark {
-    background-color: #87CEEB; /* Spark-inspired color */
-    color: white;
-}
-
-.concept:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
-
-/* Call-to-Action Buttons */
-.cta-button {
-    padding: 15px 30px;
-    background-color: white;
+h1, h2 {
     color: #333;
-    text-decoration: none;
     font-weight: bold;
-    border-radius: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Homepage Styling */
+.homepage-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.featured-technologies {
+    margin-bottom: 50px;
+}
+
+.featured-technologies h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.technology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tech-card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+}
+
+.tech-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: #007BFF;
-    color: white;
+    background-color: #0056b3;
+}
+
+/* Latest Blogs Section */
+.latest-blogs h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.blog-card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.blog-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.blog-card small {
+    color: #999;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .concept-container {
-        flex-direction: column;
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .concept {
-        width: 100%;
-        padding: 20px;
+    .technology-grid, .blog-grid {
+        grid-template-columns: 1fr;
     }
 }
