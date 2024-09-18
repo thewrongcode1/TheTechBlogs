@@ -6,10 +6,9 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>{{ page.title }}</title>
     
-    <!-- Adsense ID -->
+    <!-- AdSense ID -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8410555868952609"
      crossorigin="anonymous"></script>
-
 </head>
 <body>
     <header>
@@ -26,12 +25,40 @@
         </ul>
     </nav>
 
-    <main>
-        {{ content }}
-    </main>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Hadoop Tutorials</h3>
+            <ul>
+                <li><a href="/hadoop-introduction">Introduction to Hadoop</a></li>
+                <li><a href="/hadoop-installation">Hadoop Installation</a></li>
+                <li><a href="/hadoop-hdfs">Understanding HDFS</a></li>
+                <li><a href="/hadoop-mapreduce">MapReduce Overview</a></li>
+                <li><a href="/hadoop-yarn">YARN Explained</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            {{ content }}
+        </main>
+    </div>
 
     <footer>
         <p>&copy; 2024 {{ site.title }}</p>
     </footer>
+
+    <!-- Ads -->
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8410555868952609"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
 </body>
 </html>
