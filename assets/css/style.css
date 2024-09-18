@@ -1,10 +1,16 @@
 /* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #f0f0f0 40%, #ffffff 100%);
     color: #333;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -16,12 +22,9 @@ header {
     letter-spacing: 1px;
 }
 
-h1, h2 {
-    color: #333;
-    font-weight: bold;
-}
-
+/* Main content should take up remaining height */
 main {
+    flex-grow: 1;
     max-width: 90%;
     margin: 40px auto;
     padding: 20px;
@@ -67,16 +70,31 @@ small {
     margin-top: 5px;
 }
 
-/* Footer Styling */
+/* Sticky Footer Styling */
 footer {
-    text-align: center;
-    padding: 20px;
     background-color: #444;
     color: white;
-    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Ensuring the footer stays at the bottom of the page */
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
 }
 
 /* Responsive Design */
