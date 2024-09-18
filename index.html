@@ -1,0 +1,25 @@
+---
+layout: default
+title: "Home"
+---
+
+# Welcome to The Tech Blogs
+
+We explore the latest in technology trends, frameworks, and stacks. Stay tuned for detailed guides on trending topics like Big Data, Hadoop, AI, and cloud computing.
+
+## Trending Posts
+
+<ul>
+  {% for post in site.posts limit:3 %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <small>{{ post.date | date: "%B %d, %Y" }}</small>
+    </li>
+  {% endfor %}
+</ul>
+
+## About Us
+
+The Tech Blogs is your go-to source for comprehensive tutorials and insights into cutting-edge technology. Join us as we deep-dive into Big Data, Hadoop, and more!
+
+© 2024 The Tech Blogs
