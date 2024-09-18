@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Big Data Hadoop Setup and Tutorials: A Complete Guide"
+title: "Big Data Hadoop Setup Guide"
 date: 2024-09-18
 ---
 
